@@ -22,7 +22,6 @@ const Carousel = (props: Props) => {
    * @param cs Index of the current slide
    */
   useEffect(() => {
-    console.log(curentSlide)
     const slides = document.querySelectorAll('.slide')
     if(slides != undefined){
       const slidesArray = Array.from(slides)
