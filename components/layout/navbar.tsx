@@ -1,5 +1,5 @@
-import React from 'react'
-import { NavMenu } from './nav'
+
+import AuthNav from './nav'
 import Link from 'next/link'
 import SearchBar from '../parts/searchBar'
 import MobileNav from './mobileNav'
@@ -14,7 +14,7 @@ export default function Navbar() {
         </Link>
         <SearchBar className='hidden md:flex ' />
         <MobileNav />
-        <NavMenu />
+        <AuthNav />
       </div>
     </div>
   )
