@@ -1,15 +1,7 @@
-import { type NextRequest,NextResponse } from "next/server"
 
-const pageUrl = (req: NextRequest) =>{
-    return req.url
+export {default} from 'next-auth/middleware'
+
+export const config = {
+    matcher: ['/dashboard']
 }
 
-const middlewares = async(req: NextRequest) => {
-    return NextResponse.next({
-        headers: new Headers({
-            "url": pageUrl(req)
-        })
-    })
-}
-
-export {middlewares as middleware}

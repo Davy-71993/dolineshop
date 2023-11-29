@@ -50,7 +50,7 @@ const data = [
 
 export default function Mybarchart() {
     return (
-      <ResponsiveContainer width="50%" height="50%">
+      <ResponsiveContainer  className="w-full h-full">
         <BarChart width={150} height={40} margin={{
           left: 5,
           top: 5

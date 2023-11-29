@@ -1,4 +1,5 @@
 import { Input } from '@/components/ui/input'
+import { ModeToggle } from '@/components/ui/mode'
 import { BadgeDollarSign, BellIcon, LayoutDashboard, MessageSquare, Settings, ShoppingBag, ShoppingBasket, ShoppingCart, Store, User, UserCheck } from 'lucide-react'
 import Link from 'next/link'
 import React, { ReactNode } from 'react'
@@ -9,7 +10,7 @@ type Props = {
 
 export default function DashboardLayout({ children }: Props) {
   return (
-    <div className='w-full flex h-[85vh] space-x-5 rounded'>
+    <div className='w-full flex h-[95vh] space-x-5 rounded'>
         <div className="w-fit h-full rounded flex bg-secondary flex-col">
             <div className="border-b-2 px-10 py-2 text-center flex flex-col items-center space-y-3 text-2xl font-bold">
                 <User size={60} />
@@ -62,6 +63,7 @@ export default function DashboardLayout({ children }: Props) {
                     <Input className="rounded-[2rem] mr-5" />
                     <MessageSquare size={35} />
                     <BellIcon size={35} />
+                    <ModeToggle />
                 </div>
             </div>
             <>

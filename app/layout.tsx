@@ -7,6 +7,7 @@ import Footer from '@/components/layout/footer'
 import { ThemeProvider } from '@/providers/theme'
 import React from 'react'
 import PageSession from '@/components/layout/Page'
+import PageLayout from '@/components/layout/pageLayout'
 
 const inter = Inter({ subsets: ['latin'], weight: '400' })
 
@@ -35,9 +36,9 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Navbar />
-            <main className="container min-h-screen mt-24 lg:mt-28">
+            <PageLayout>
               {children}
-            </main>
+            </PageLayout>
             <Footer />
           </ThemeProvider>
         </PageSession>

@@ -49,7 +49,7 @@ export default function MyLineChart() {
         },
       ];
     return (
-      <ResponsiveContainer width="50%" height="50%">
+      <ResponsiveContainer  className="w-full h-full">
         <LineChart
           width={500}
           height={300}

@@ -1,9 +1,17 @@
+"use client"
+
+
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
-type Props = {}
-
-const Footer = (props: Props) => {
+const Footer = () => {
+  // hide the menu bar on the dashboard
+  const pathName = usePathname()
+  if(pathName.includes('dashboard')){
+    return null
+  }
   return (
     <div className="w-full py-3 mt-20 border-t-2 border-slate-300">
         <div className="container">

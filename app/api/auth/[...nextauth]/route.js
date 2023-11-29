@@ -45,11 +45,13 @@ const authOptions = {
       }
     })
   ],
-  secret: process.env.SECRET,
   session: {
     strategy: 'jwt'
   },
-  debug: process.env.NODE_ENV === 'development'
+  debug: process.env.NODE_ENV === 'development',
+  pages:{
+    signIn: '/login'
+  }
 }
 
 const handler = NextAuth(authOptions)
