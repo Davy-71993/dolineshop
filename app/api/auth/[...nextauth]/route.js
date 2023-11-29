@@ -1,3 +1,4 @@
+import { APP_URL } from "@/lib/constants"
 import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
 
@@ -16,8 +17,6 @@ const authOptions = {
         password: { label: "Password", type: "password" }
       },
       async authorize(credentials, req) {
-        
-        
         // You need to provide your own logic here that takes the credentials
         // submitted and returns either a object representing a user or value
         // that is false/null if the credentials are invalid.
@@ -26,7 +25,7 @@ const authOptions = {
         // (i.e., the request IP address)
         
         try {
-          const res = await fetch('http://localhost:3000/api/auth/login', {
+          const res = await fetch(`${APP_URL}/api/auth/login`, {
             method: 'POST',
             headers: {
               "Content-Type": 'application/json'
