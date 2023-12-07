@@ -5,44 +5,44 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Resp
 
 const data = [
   {
-    name: 'Page A',
-    uv: 4000,
+    name: 'Mon',
+    Profits: 4000,
     pv: 2400,
     amt: 2400,
   },
   {
-    name: 'Page B',
-    uv: 3000,
+    name: 'Tue',
+    Profits: 3000,
     pv: 1398,
     amt: 2210,
   },
   {
-    name: 'Page C',
-    uv: 2000,
+    name: 'Wed',
+    Profits: 2000,
     pv: 9800,
     amt: 2290,
   },
   {
-    name: 'Page D',
-    uv: 2780,
+    name: 'Thur',
+    Profits: 2780,
     pv: 3908,
     amt: 2000,
   },
   {
-    name: 'Page E',
-    uv: 1890,
+    name: 'Fri',
+    Profits: 1890,
     pv: 4800,
     amt: 2181,
   },
   {
-    name: 'Page F',
-    uv: 2390,
+    name: 'Sat',
+    Profits: 2390,
     pv: 3800,
     amt: 2500,
   },
   {
-    name: 'Page G',
-    uv: 3490,
+    name: 'Sun',
+    Profits: 3490,
     pv: 4300,
     amt: 2100,
   },
@@ -55,7 +55,7 @@ export default function Mybarchart() {
           left: 5,
           top: 5
         }} data={data}>
-          <Bar dataKey="uv" fill="#8884d8" />
+          <Bar dataKey="Profits" fill="#8884d8" />
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />

@@ -10,8 +10,8 @@ export default function ShopPage({children, params}:Props) {
     
   return (
     <div className="space-y-5 flex flex-col flex-1">
-      <div className="flex space-x-3">
-          <div className="p-5 w-full bg-secondary rounded flex space-x-3">
+      <div className="flex space-x-3 justify-between">
+          <div className="p-5 w-full max-w-[400px] bg-blue-400 text-white rounded flex space-x-3">
             <ShoppingBasket size={35} />
             <div>
               <h4 className="">Products</h4>
@@ -19,7 +19,7 @@ export default function ShopPage({children, params}:Props) {
               <p className="font-thin line-clamp-1">No products yet</p>
             </div>
           </div>
-          <div className="p-5 w-full bg-secondary rounded flex space-x-5">
+          <div className="p-5 w-full max-w-[400px] bg-green-400 text-white rounded flex space-x-5">
             <ListOrdered size={35} />
             <div>
               <h4>Orders</h4>
@@ -27,7 +27,7 @@ export default function ShopPage({children, params}:Props) {
               <p className="font-thin line-clamp-1">No pending orders</p>
             </div>
           </div>
-          <div className="p-5 w-full bg-secondary rounded flex space-x-3">
+          <div className="p-5 w-full max-w-[400px] bg-purple-400 text-white rounded flex space-x-3">
             <DollarSign size={35} />
             <div>
               <h4 className="">Transuctions</h4>

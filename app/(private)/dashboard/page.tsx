@@ -1,4 +1,5 @@
 
+import Mybarchart from "@/components/parts/charts/barchart";
 import MyLineChart from "@/components/parts/charts/linechart";
 import { InvoicesTable } from "@/components/parts/table";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -41,8 +42,16 @@ export default async function DashboardPage() {
           <ScrollArea className="flex-1 h-[68vh] w-full rounded-md border p-4">
             <h4 className="text-2xl">Latest transuctions</h4>
             <InvoicesTable />
-            <h4 className="text-2xl">My Line Chart</h4>
-            <MyLineChart />
+            <div className="w-full h-[400px] lg:flex lg:gap-5">
+              <div className="h-full w-full mt-10 mb-20">
+                <h1 className="text-2xl font-bold text-center my-5">My Line Chart</h1>
+                <MyLineChart />
+              </div>
+              <div className="h-full w-full mt-10">
+                <h1 className="text-2xl font-bold text-center my-5">My Bar Chart</h1>
+                <Mybarchart />
+              </div>
+            </div>
           </ScrollArea>
         </div>
 

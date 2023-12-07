@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ShopCard() {
   return (
-    <Link href={`/dashboard/stores/yyuohup9`} className="border w-full col-span-1 bg-secondary p-5 rounded">
+    <Link href={`/dashboard/stores/yyuohup9`} className="bg-secondary flex flex-col my-5 sm:my-0 hover:bg-secondary/75 p-5">
         <h2 className="rounded p-5 text-center font-bold text-lg w-2/3 mx-auto bg-primary-foreground">Davy Unique Smart Phones</h2>
 
         <Image

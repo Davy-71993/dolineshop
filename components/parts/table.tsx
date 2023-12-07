@@ -35,6 +35,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import clsx from "clsx"
 
 const data: Payment[] = [
   {
@@ -259,6 +260,10 @@ export function InvoicesTable() {
                 <TableRow
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
+                  className={clsx(
+                    "hover:bg-primary-foreground",
+                    {"bg-primary-foreground": row.getIsSelected()}
+                  )}
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>
