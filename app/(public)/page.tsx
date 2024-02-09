@@ -5,7 +5,6 @@ import ProductCard from '@/components/parts/product-card'
 import { Brands, Categories, Products } from '@/lib/dami-api'
 import Link from 'next/link'
 
-
 /**
  * The home landing page.
  * @returns JSX Element
@@ -45,7 +44,7 @@ export default function Home() {
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {
           Products.map((item, index) => (
-            // Brand card
+            // Product card
             <ProductCard item={item}  key={index}/>
           ))
         }

@@ -1,4 +1,11 @@
-
+export type User = {
+    username: string,
+    email: string,
+    password?: string
+    pic?: string
+    tell?: string,
+    
+}
 export type Category = {
     id?: string,
     name?: string,
@@ -21,5 +28,24 @@ export type Product = {
     price: number,
     location?: string,
     rating?: number,
-    image: string
+    image: string,
+}
+
+export type Location = {
+    longitude: number,
+    latitude: number
+}
+export type Transuction ={
+    amount: number
+    status: 'pending' | 'successful' | 'cancelled'
+    type: 'sale' | 'purchase'
+    client: User
+}
+
+export type Shop = {
+    name: string,
+    products?: Product[]
+    transuctions?: Transuction[]
+    keeper: User,
+    location?: Location
 }
